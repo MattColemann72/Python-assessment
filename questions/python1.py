@@ -96,6 +96,17 @@ def three(input):
 	vowels = [each for each in ui if each in vowelchars]
 	return len(vowels)
 
+	'''
+	count = 0
+	for i in range(len(input)):
+		if input[i].lower() in "aeiou":
+			count += 1
+	return count 
+	
+
+
+	'''
+
 # print(three("aaaaaaaaaa"))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
@@ -167,7 +178,20 @@ def five(input):
 	for x in numlist:
 		result = result * x
 
+	# for n in x: can just condense the for loops into this one on it's own
+	# 	result = result * x
+
 	return result
+
+	'''
+	Shorter way of doing it
+
+	sum = 1
+	for i in range(1, input + 1):
+		sum = sum *i
+	return sum
+	
+	'''
 
 #print(five(8))
 
@@ -190,14 +214,15 @@ def five(input):
 
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
-def six(string, num, character):
+def six(string, int, char):
 	strlen = len(string)
 	strlower = string.lower()
-	charlower = character.lower()
+	char = char.lower()
 
-	if strlen < num:
+	if strlen < int:
 		return False
-	if str(strlower)[num - 1] == character:
+
+	if str(strlower)[int - 1] == char:
 		return True
 	else:
 		return False
@@ -230,13 +255,15 @@ def six(string, num, character):
 def seven(inputString, char):
 	#what position of the inputString is char. Return that, else return -1
 	if char in inputString:
-		#return char
 		removespace = inputString.replace(" ", "")
-		charpos = removespace.find(char)
-		charpos += 1
-		return charpos
+		return charpos = removespace.find(char) +1
 
 	return -1
+	
+	''' Another Way
+	if char in removespace:
+		return temp.index(char)+1
+	'''
 
 #print(seven("This is a Sentence", 'S'))
 
@@ -265,6 +292,19 @@ def seven(inputString, char):
 	# help(int) for working with numbers and help(str) for working with Strings.
 
 def eight(arg1):
+	'''
+	highest = 0
+	numlist = arg1.split()
+
+	for i in numlist:
+		sum = 0
+		for j in i:
+			sum += int(j)
+		highest = max(sum, highest) # This sets highest to the highest number
+
+	return highest
+	'''
+
 	return 0
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
@@ -292,6 +332,19 @@ def eight(arg1):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def nine(input):
+	'''
+	edit = input.lower()
+	a = edit.split("bert")
+
+	if edit.count("bert")>1:
+		if a[0].endswith("bert") and a[2].startswith("bert):
+			return a[1]
+
+	return ""
+
+	'''
+
+
 	return ""
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
@@ -322,7 +375,14 @@ def nine(input):
 	# help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
 def ten(input):
-	return []
+	'''
+	names = input.split(",")
+	owners = []
+	for i in range(0, len(names), 4):
+		if names[i+2] == "False" and names[i] not in owners:
+			owners.append(names[i])
+	return owners
+	'''
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
