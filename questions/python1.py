@@ -157,7 +157,22 @@ def four(input):
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
 
 def five(input):
-	return 1
+	
+	ui = int(input)
+	x = range(1,ui+1)
+	numlist = [1]
+	result = 1
+
+	for n in x:
+		numlist.append(n)
+		# numlist[n] += x
+	
+	for x in numlist:
+		result = result * x
+
+	return result
+
+#print(five(8))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
