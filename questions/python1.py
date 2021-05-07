@@ -232,13 +232,14 @@ def seven(inputString, char):
 	#what position of the inputString is char. Return that, else return -1
 	if char in inputString:
 		#return char
-		charpos = inputString.find(char)
+		removespace = inputString.replace(" ", "")
+		charpos = removespace.find(char)
 		charpos += 1
 		return charpos
 
 	return -1
 
-print(seven("This is a Sentence", 'S'))
+#print(seven("This is a Sentence", 'S'))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
