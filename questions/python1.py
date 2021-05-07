@@ -42,7 +42,7 @@ def one(input1, input2):
 		return input1 + " " + input2
 	return input2
 
-print(one("Hello5", "Hello2"))
+#print(one("Hello5", "Hello2"))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -91,7 +91,12 @@ def two(arg1):
 	# How do we ignore case in a String? help(str) may offer some insight.
 
 def three(input):
-    return 0
+	ui = input.lower()
+	vowelchars = "aeiou"
+	vowels = [each for each in ui if each in vowelchars]
+	return len(vowels)
+
+# print(three("aaaaaaaaaa"))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
