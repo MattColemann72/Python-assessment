@@ -200,20 +200,15 @@ def six(string, num, character):
 
 	if strlen < num:
 		return False
-
 	if str(strlower)[num - 1] == character:
-		# print("True")
-		# print(strlower[num])
 		return True
 	else:
-		# print(strlower[num])
-		# print("False")
 		return False
 
 	return False
 
 
-print(six("Hi-There",10,"e"))
+# print(six("Hi-There",10,"e"))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -236,6 +231,8 @@ print(six("Hi-There",10,"e"))
 	# Take a look at the documentation for Strings, List and range.
 
 def seven(inputString, char):
+
+
 	return -1
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
