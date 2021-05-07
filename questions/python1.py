@@ -164,9 +164,7 @@ def five(input):
 	result = 1
 
 	for n in x:
-		numlist.append(n)
-		# numlist[n] += x
-	
+		numlist.append(n)	
 	for x in numlist:
 		result = result * x
 
@@ -231,9 +229,16 @@ def six(string, num, character):
 	# Take a look at the documentation for Strings, List and range.
 
 def seven(inputString, char):
-
+	#what position of the inputString is char. Return that, else return -1
+	if char in inputString:
+		#return char
+		charpos = inputString.find(char)
+		charpos += 1
+		return charpos
 
 	return -1
+
+print(seven("This is a Sentence", 'S'))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
