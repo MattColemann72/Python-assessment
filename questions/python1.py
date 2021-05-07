@@ -122,20 +122,19 @@ def four(input):
 	ie = "ie" #if ie comes after anything but C return True
 	ei = "ei" #if ei comes after c return True
 
-	for x in range(0, len(input)):
-		if ie in input:
-			if "cie" in input:
-				return False
-			else:
-				return True
+	if ie in input:
+		if "cie" in input:
+			return False
+		else:
+			return True
 		
-		if ei in input:
-			if "cei" in input:
-				return True
-			else:
-				return False
+	if ei in input:
+		if "cei" in input:
+			return True
+		else:
+			return False
 		
-		return False
+	return False
 
 #print(four("glacier"))
 
