@@ -38,9 +38,11 @@
 def one(input1, input2):
 	if len(input1) > len(input2):
 		return input1
+	elif len(input1) == len(input2):
+		return input1 + " " + input2
 	return input2
 
-print(one("Hello34", "Hello2"))
+print(one("Hello5", "Hello2"))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
